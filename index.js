@@ -18,7 +18,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-  origin: ['https://life-vault.vercel.app/'], // Reemplaza con tu dominio en Vercel
+  origin: ['https://life-vault.vercel.app'], // Reemplaza con tu dominio en Vercel
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
 };
