@@ -15,15 +15,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch(err => console.error('Error conectando a MongoDB:', err));
 
 app.use(express.json());
-
-
-const corsOptions = {
-  origin: ['https://life-vault.vercel.app'], // Reemplaza con tu dominio en Vercel
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-  allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.use('/api', router);
